@@ -1,0 +1,11 @@
+<ng-container [formGroup]="formGroup">
+  <div class="form-group">
+    <label for="interest">Interest</label>
+    <input type="text" id="interest" formControlName="interest" />
+    @if (formGroup.invalid && formGroup.touched) {
+      @if (interest?.errors?.["required"]) {
+        <p class="error">Interest is required.</p>
+      }
+    }
+  </div>
+</ng-container>

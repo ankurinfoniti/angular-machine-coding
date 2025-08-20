@@ -1,0 +1,32 @@
+<div class="main">
+  <div class="tabs">
+    @for (tab of tabsConfig; track tab.name) {
+      <button
+        type="button"
+        class="tab-button"
+        [class.active]="isActive($index)"
+        (click)="onTabClick($index)"
+      >
+        {{ tab.name | titlecase }}
+      </button>
+    }
+  </div>
+  <div class="tab-content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <ng-container
+        *ngComponentOutlet="activeTabComponent(); inputs: { formGroup: form.get(activeTabName()) }"
+      ></ng-container>
+
+      @if (activeTabIndex() > 0) {
+        <button type="button" class="submit-button" (click)="onPrevClick()">Prev</button>
+        &nbsp;
+      }
+
+      @if (tabsConfig.length === activeTabIndex() + 1) {
+        <button type="submit" class="submit-button" [disabled]="form.invalid">Submit</button>
+      } @else {
+        <button type="button" class="submit-button" (click)="onNextClick()">Next</button>
+      }
+    </form>
+  </div>
+</div>

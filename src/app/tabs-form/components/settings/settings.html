@@ -1,0 +1,15 @@
+<ng-container [formGroup]="formGroup">
+  <div class="form-group">
+    <label for="theme">Theme</label>
+    <select id="theme" formControlName="theme">
+      <option value="">Please Select</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+    @if (formGroup.invalid && formGroup.touched) {
+      @if (theme?.errors?.["required"]) {
+        <p class="error">Theme is required.</p>
+      }
+    }
+  </div>
+</ng-container>

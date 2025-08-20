@@ -1,0 +1,38 @@
+<ng-container [formGroup]="formGroup">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" />
+    @if (formGroup.invalid && formGroup.touched) {
+      @if (name?.errors?.["required"]) {
+        <p class="error">Name is required.</p>
+      }
+      @if (name?.errors?.["minLength"]) {
+        <p class="error">Name must be at least 3 characters long.</p>
+      }
+    }
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" id="age" formControlName="age" />
+    @if (formGroup.invalid && formGroup.touched) {
+      @if (age?.errors?.["required"]) {
+        <p class="error">Age is required.</p>
+      }
+      @if (age?.errors?.["min"]) {
+        <p class="error">Age must be greater than 18.</p>
+      }
+    }
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" />
+    @if (formGroup.invalid && formGroup.touched) {
+      @if (email?.errors?.["required"]) {
+        <p class="error">Email is required.</p>
+      }
+      @if (email?.errors?.["email"]) {
+        <p class="error">Email is invalid.</p>
+      }
+    }
+  </div>
+</ng-container>
