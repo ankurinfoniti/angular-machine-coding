@@ -1,0 +1,72 @@
+<div class="container">
+  <h1 class="text-center">Buy Movie Ticket</h1>
+
+  <div>
+    <button type="button" (click)="addTicket()">Add Ticket</button>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="email" placeholder="Enter you email" formControlName="email" />
+    @if (form.invalid && form.controls.email.touched) {
+      @if (form.controls.email.errors?.['required']) {
+        <p class="error">Email is required</p>
+      }
+      @if (form.controls.email.errors?.['email']) {
+        <p class="error">Email is invalid</p>
+      }
+    }
+    <input type="text" placeholder="Enter phone number" formControlName="phone" />
+    @if (form.invalid && form.controls.phone.touched) {
+      @if (form.controls.phone.errors?.['required']) {
+        <p class="error">Phone number is required</p>
+      }
+      @if (form.controls.phone.errors?.['pattern']) {
+        <p class="error">Phone number is invalid</p>
+      }
+    }
+    <div formGroupName="address">
+      <input type="text" placeholder="Enter Street Name" formControlName="street" />
+      @if (form.invalid && address.controls.street.touched) {
+        @if (address.controls.street.errors?.['required']) {
+          <p class="error">Street name is required</p>
+        }
+      }
+      <input type="text" placeholder="Enter Postal code" formControlName="postalCode" />
+      @if (form.invalid && address.controls.postalCode.touched) {
+        @if (address.controls.postalCode.errors?.['required']) {
+          <p class="error">Postal code is required</p>
+        }
+        @if (address.controls.postalCode.errors?.['pattern']) {
+          <p class="error">Postal code is invalid</p>
+        }
+      }
+    </div>
+
+    <div formArrayName="tickets">
+      @for (ticket of tickets.controls; track $index) {
+        <div [formGroupName]="$index">
+          <input type="text" placeholder="Enter name" formControlName="name" />
+          @if (form.invalid && tickets.controls[$index].controls.name.touched) {
+            @if (tickets.controls[$index].controls.name.errors?.['required']) {
+              <p class="error">Name is required</p>
+            }
+          }
+          <input type="text" placeholder="Enter age" formControlName="age" />
+          @if (form.invalid && tickets.controls[$index].controls.age.touched) {
+            @if (tickets.controls[$index].controls.age.errors?.['required']) {
+              <p class="error">Age is required</p>
+            }
+
+            @if (tickets.controls[$index].controls.age.errors?.['pattern']) {
+              <p class="error">Age is invalid</p>
+            }
+          }
+          @if ($index) {
+            <button type="button" (click)="removeTicket($index)">Remove</button>
+          }
+        </div>
+      }
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
