@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Chips Input</h2>
+
+  <div>
+    <input
+      type="text"
+      placeholder="Type a chips and press enter"
+      (keyup.enter)="addChip($event.target.value); chipInput.value = ''"
+      #chipInput
+    />
+  </div>
+  <div class="chips-result">
+    @for (chip of chips(); track chip) {
+      <span>{{ chip }} <span class="delete-chip" (click)="removeChip($index)">X</span></span>
+    }
+  </div>
+</div>

@@ -1,0 +1,74 @@
+/* General container styling */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Important for padding and width */
+  margin-bottom: 15px;
+}
+
+input[type='text']:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Chips container styling */
+.chips-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  min-height: 40px;
+  background-color: #f9f9f9;
+}
+
+/* Individual chip styling */
+.chips-result > span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 16px; /* Pill shape */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Delete button ('X') styling */
+.delete-chip {
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: #e0e0e0;
+  transition: color 0.2s ease-in-out;
+}
+
+.delete-chip:hover {
+  color: #fff;
+}
