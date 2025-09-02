@@ -1,0 +1,8 @@
+<div class="accordion-item">
+  <button class="accordion-title" (click)="toggleExpand()" [attr.aria-expanded]="isExpanded">
+    {{ item.title }}
+  </button>
+  @if (isExpanded) {
+    <div class="accordion-content">{{ item.content }}</div>
+  }
+</div>

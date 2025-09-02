@@ -1,0 +1,10 @@
+<div class="accordion">
+  @for (item of items; track item) {
+    <app-accordion-single
+      [item]="item"
+      [isExpanded]="openIndex() === $index"
+      (toggled)="toggleItem($index)"
+    >
+    </app-accordion-single>
+  }
+</div>
