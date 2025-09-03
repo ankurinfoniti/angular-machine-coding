@@ -1,0 +1,15 @@
+<div class="light-grey">
+  <div
+    class="green"
+    role="progressbar"
+    [attr.aria-valuenow]="progress"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    [style]="{
+      height: '24px',
+      width: progress + '%',
+    }"
+  >
+    {{ progress }}%
+  </div>
+</div>

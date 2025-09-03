@@ -5,6 +5,7 @@ import { DemoLink } from './demo-link/demo-link';
 import { FormArray } from './form-array/form-array/form-array';
 import { ChipsInput } from './chips-input/chips-input';
 import { Accordion } from './accordion/containers/accordion/accordion';
+import { ProgressBarContainer } from './progress-bar/container/progress-bar-container/progress-bar-container';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: 'accordion',
     component: Accordion,
+  },
+  {
+    path: 'progress-bar',
+    component: ProgressBarContainer,
   },
 ];
