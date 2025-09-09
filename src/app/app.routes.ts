@@ -6,6 +6,7 @@ import { FormArray } from './form-array/form-array/form-array';
 import { ChipsInput } from './chips-input/chips-input';
 import { Accordion } from './accordion/containers/accordion/accordion';
 import { ProgressBarContainer } from './progress-bar/container/progress-bar-container/progress-bar-container';
+import { TogglePassword } from './toggle-password/toggle-password';
 
 export const routes: Routes = [
   {
@@ -32,4 +33,8 @@ export const routes: Routes = [
     path: 'progress-bar',
     component: ProgressBarContainer,
   },
+  {
+    path: 'toggle-password',
+    component: TogglePassword
+  }
 ];
