@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>OTP Input</h2>
+
+  <div class="otp-inputs-container">
+    @for (digit of otpDigits; track $index) {
+      <input
+        type="text"
+        class="otp-input"
+        autofocus
+        [value]="digit"
+        (input)="onInput($event.target.value, $index)"
+      />
+    }
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { ChipsInput } from './chips-input/chips-input';
 import { Accordion } from './accordion/containers/accordion/accordion';
 import { ProgressBarContainer } from './progress-bar/container/progress-bar-container/progress-bar-container';
 import { TogglePassword } from './toggle-password/toggle-password';
+import { OtpInput } from './otp-input/otp-input';
 
 export const routes: Routes = [
   {
@@ -35,6 +36,10 @@ export const routes: Routes = [
   },
   {
     path: 'toggle-password',
-    component: TogglePassword
-  }
+    component: TogglePassword,
+  },
+  {
+    path: 'otp-input',
+    component: OtpInput,
+  },
 ];

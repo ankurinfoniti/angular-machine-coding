@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.otp-inputs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.otp-input {
+  width: 60px;
+  height: 60px;
+  margin: 0 8px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.otp-input:focus {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.otp-input:not(:placeholder-shown) {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #4ade80;
+  box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
+}
+
+.otp-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    margin: 0 6px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    margin: 0 4px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Animation for input focus */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.otp-input:focus {
+  animation: pulse 1.5s infinite;
+}
+
+/* Custom scrollbar for webkit browsers */
+.otp-input::-webkit-outer-spin-button,
+.otp-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.otp-input[type='number'] {
+  -moz-appearance: textfield;
+}
