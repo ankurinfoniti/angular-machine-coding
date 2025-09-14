@@ -6,9 +6,11 @@
       <input
         type="text"
         class="otp-input"
-        autofocus
+        maxlength="1"
         [value]="digit"
         (input)="onInput($event.target.value, $index)"
+        (keydown)="onKeydown($event, $index)"
+        #otpInput
       />
     }
   </div>
