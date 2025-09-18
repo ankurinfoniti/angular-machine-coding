@@ -9,6 +9,7 @@ import { ProgressBarContainer } from './progress-bar/container/progress-bar-cont
 import { TogglePassword } from './toggle-password/toggle-password';
 import { OtpInput } from './otp-input/otp-input';
 import { Todos } from './todos/containers/todos/todos';
+import { ListSorterContainer } from './list-sorter/containers/list-sorter-container/list-sorter-container';
 
 export const routes: Routes = [
   {
@@ -45,6 +46,10 @@ export const routes: Routes = [
   },
   {
     path: 'todo-list',
-    component: Todos
-  }
+    component: Todos,
+  },
+  {
+    path: 'list-sorter',
+    component: ListSorterContainer,
+  },
 ];
