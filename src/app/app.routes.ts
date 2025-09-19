@@ -10,6 +10,7 @@ import { TogglePassword } from './toggle-password/toggle-password';
 import { OtpInput } from './otp-input/otp-input';
 import { Todos } from './todos/containers/todos/todos';
 import { ListSorterContainer } from './list-sorter/containers/list-sorter-container/list-sorter-container';
+import { CharacterCount } from './character-count/character-count';
 
 export const routes: Routes = [
   {
@@ -51,5 +52,9 @@ export const routes: Routes = [
   {
     path: 'list-sorter',
     component: ListSorterContainer,
+  },
+  {
+    path: 'character-count',
+    component: CharacterCount,
   },
 ];
