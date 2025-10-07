@@ -11,6 +11,7 @@ import { OtpInput } from './otp-input/otp-input';
 import { Todos } from './todos/containers/todos/todos';
 import { ListSorterContainer } from './list-sorter/containers/list-sorter-container/list-sorter-container';
 import { CharacterCount } from './character-count/character-count';
+import { EvenOrOdd } from './even-or-odd/even-or-odd';
 
 export const routes: Routes = [
   {
@@ -56,5 +57,9 @@ export const routes: Routes = [
   {
     path: 'character-count',
     component: CharacterCount,
+  },
+  {
+    path: 'even-or-odd',
+    component: EvenOrOdd,
   },
 ];
