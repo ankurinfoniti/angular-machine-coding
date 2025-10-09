@@ -12,6 +12,7 @@ import { Todos } from './todos/containers/todos/todos';
 import { ListSorterContainer } from './list-sorter/containers/list-sorter-container/list-sorter-container';
 import { CharacterCount } from './character-count/character-count';
 import { EvenOrOdd } from './even-or-odd/even-or-odd';
+import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
 
 export const routes: Routes = [
   {
@@ -61,5 +62,9 @@ export const routes: Routes = [
   {
     path: 'even-or-odd',
     component: EvenOrOdd,
+  },
+  {
+    path: 'mortgage-calculator',
+    component: MortgageCalculator,
   },
 ];
