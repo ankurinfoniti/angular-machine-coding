@@ -13,6 +13,7 @@ import { ListSorterContainer } from './list-sorter/containers/list-sorter-contai
 import { CharacterCount } from './character-count/character-count';
 import { EvenOrOdd } from './even-or-odd/even-or-odd';
 import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
+import { FilterRecipes } from './filter-recipes/filter-recipes';
 
 export const routes: Routes = [
   {
@@ -66,5 +67,9 @@ export const routes: Routes = [
   {
     path: 'mortgage-calculator',
     component: MortgageCalculator,
+  },
+  {
+    path: 'filter-recipes',
+    component: FilterRecipes,
   },
 ];
