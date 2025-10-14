@@ -14,6 +14,7 @@ import { CharacterCount } from './character-count/character-count';
 import { EvenOrOdd } from './even-or-odd/even-or-odd';
 import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
 import { FilterRecipes } from './filter-recipes/filter-recipes';
+import { BlogPost } from './blog-post/container/blog-post/blog-post';
 
 export const routes: Routes = [
   {
@@ -71,5 +72,9 @@ export const routes: Routes = [
   {
     path: 'filter-recipes',
     component: FilterRecipes,
+  },
+  {
+    path: 'blog-post',
+    component: BlogPost,
   },
 ];

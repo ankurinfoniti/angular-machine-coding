@@ -1,0 +1,31 @@
+.card {
+  font-family: sans-serif;
+  background-color: #efefef;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.card-title {
+  margin: 15px 0;
+}
+
+.card-body p {
+  line-height: 1.5;
+}
+
+.tags {
+  margin: 15px 0;
+}
+
+.tags span {
+  color: blue;
+  margin-right: 15px;
+}
+
+.reactions {
+  margin-top: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,7 @@
+<div class="container">
+  <h2>Blog Posts</h2>
+
+  @for (blog of blogs; track $index) {
+    <app-blog-post-card [blog]="blog"></app-blog-post-card>
+  }
+</div>
