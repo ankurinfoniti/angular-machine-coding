@@ -15,6 +15,7 @@ import { EvenOrOdd } from './even-or-odd/even-or-odd';
 import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
 import { FilterRecipes } from './filter-recipes/filter-recipes';
 import { BlogPost } from './blog-post/container/blog-post/blog-post';
+import { FocusInput } from './focus-input/focus-input';
 
 export const routes: Routes = [
   {
@@ -76,5 +77,9 @@ export const routes: Routes = [
   {
     path: 'blog-post',
     component: BlogPost,
+  },
+  {
+    path: 'focus-input',
+    component: FocusInput,
   },
 ];
