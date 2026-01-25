@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>{{ displayTime() }}</h1>
+
+  <div class="actions">
+    <button type="button" class="btn btn-start" (click)="startTimer()">
+      {{ !isRunning() ? 'Start' : 'Stop' }}
+    </button>
+    <button type="button" class="btn btn-reset" (click)="resetTimer()">Reset</button>
+  </div>
+</div>

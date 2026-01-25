@@ -8,6 +8,7 @@ import { Accordion } from './accordion/containers/accordion/accordion';
 import { ProgressBarContainer } from './progress-bar/container/progress-bar-container/progress-bar-container';
 import { TogglePassword } from './toggle-password/toggle-password';
 import { OtpInput } from './otp-input/otp-input';
+import { StopWatch } from './stop-watch/stop-watch';
 
 export const routes: Routes = [
   {
@@ -41,5 +42,9 @@ export const routes: Routes = [
   {
     path: 'otp-input',
     component: OtpInput,
+  },
+  {
+    path: 'stop-watch',
+    component: StopWatch,
   },
 ];
