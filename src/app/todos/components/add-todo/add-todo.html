@@ -1,0 +1,4 @@
+<div class="add-todo-container">
+  <input type="text" placeholder="Enter todo" #input />
+  <button type="button" (click)="onAddTodo(input.value); input.value = ''">Add</button>
+</div>

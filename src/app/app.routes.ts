@@ -8,6 +8,14 @@ import { Accordion } from './accordion/containers/accordion/accordion';
 import { ProgressBarContainer } from './progress-bar/container/progress-bar-container/progress-bar-container';
 import { TogglePassword } from './toggle-password/toggle-password';
 import { OtpInput } from './otp-input/otp-input';
+import { Todos } from './todos/containers/todos/todos';
+import { ListSorterContainer } from './list-sorter/containers/list-sorter-container/list-sorter-container';
+import { CharacterCount } from './character-count/character-count';
+import { EvenOrOdd } from './even-or-odd/even-or-odd';
+import { MortgageCalculator } from './mortgage-calculator/mortgage-calculator';
+import { FilterRecipes } from './filter-recipes/filter-recipes';
+import { BlogPost } from './blog-post/container/blog-post/blog-post';
+import { FocusInput } from './focus-input/focus-input';
 import { StopWatch } from './stop-watch/stop-watch';
 
 export const routes: Routes = [
@@ -42,6 +50,38 @@ export const routes: Routes = [
   {
     path: 'otp-input',
     component: OtpInput,
+  },
+  {
+    path: 'todo-list',
+    component: Todos,
+  },
+  {
+    path: 'list-sorter',
+    component: ListSorterContainer,
+  },
+  {
+    path: 'character-count',
+    component: CharacterCount,
+  },
+  {
+    path: 'even-or-odd',
+    component: EvenOrOdd,
+  },
+  {
+    path: 'mortgage-calculator',
+    component: MortgageCalculator,
+  },
+  {
+    path: 'filter-recipes',
+    component: FilterRecipes,
+  },
+  {
+    path: 'blog-post',
+    component: BlogPost,
+  },
+  {
+    path: 'focus-input',
+    component: FocusInput,
   },
   {
     path: 'stop-watch',

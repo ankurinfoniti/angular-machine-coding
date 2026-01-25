@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>🍽️ Recipe Explorer</h1>
+  <div class="cart">
+    <div>
+      <label for="ratingFilter">Filter by Rating</label>
+      <select id="ratingFilter" #rating (change)="filterRecipes(rating.value)">
+        <option value="4">4.0+</option>
+        <option value="4.3">4.3+</option>
+        <option value="4.5">4.5+</option>
+        <option value="4.7">4.7+</option>
+        <option value="4.9">4.9</option>
+      </select>
+    </div>
+    <div>
+      <h3 class="cart-items">🛒 Cart Items: {{ carts() }}</h3>
+    </div>
+  </div>
+  <h3>Average Rating: {{ averageRecipe() }} ({{ totalRecipes() }} recipes)</h3>
+  <div class="recipe-cards-container">
+    @for (recipe of filteredRecipes(); track $index) {
+      <div class="recipe-card">
+        <img [alt]="recipe.name" class="recipe-card-img" [src]="recipe.image" />
+        <h4>{{ recipe.name }}</h4>
+        <p>🍴 Cuisine: {{ recipe.cuisine }}</p>
+        <p>⭐ Rating: {{ recipe.rating }} ({{ recipe.reviewCount }} reviews)</p>
+        <button class="add-to-cart-btn" (click)="addToCart()">Add to Cart</button>
+      </div>
+    }
+  </div>
+</div>

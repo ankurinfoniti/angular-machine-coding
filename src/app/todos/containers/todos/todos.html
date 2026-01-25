@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Todo List</h1>
+
+  <app-add-todo (addTodo)="onAddTodo($event)"></app-add-todo>
+
+  @for (todo of todos(); track todo.id) {
+    <app-todo-view [todo]="todo" (deleteTodo)="onDeleteTodo($event)"></app-todo-view>
+  }
+</div>

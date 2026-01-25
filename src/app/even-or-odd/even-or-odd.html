@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="even-odd-container">
+    <h1 class="title">Even or Odd Checker</h1>
+    <input class="number-input" type="text" placeholder="Enter a number" #number />
+    <button class="check-button" (click)="checkNumber(number.value)">Check</button>
+    <div class="result-area">
+      <div class="result">
+        {{ result$ | async }}
+      </div>
+    </div>
+  </div>
+</div>

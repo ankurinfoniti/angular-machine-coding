@@ -1,0 +1,39 @@
+<div class="character-count">
+  <h1>Character Count</h1>
+  <p>Track your input length with live character warnings.</p>
+
+  <div class="container">
+    <div class="inputs">
+      <label for="">
+        Max length:
+        <input
+          type="number"
+          min="0"
+          max="1000"
+          class="max-length"
+          (input)="updateMaxCharacter($event.target.value)"
+        />
+      </label>
+    </div>
+    <textarea
+      class="text"
+      placeholder="Start Typing"
+      (input)="updateCharacterCount(textarea.value)"
+      #textarea
+    ></textarea>
+
+    <div class="char-info">{{ characterCount }} / {{ maxCharacter }}</div>
+
+    <div class="warnings">
+      @if (showWarning && !showError) {
+        <p class="warning-text">You are close to the limit!</p>
+      }
+
+      @if (showError) {
+        <p class="error-message">
+          Limit exceeded by {{ characterCount - maxCharacter }} characters
+        </p>
+      }
+    </div>
+  </div>
+</div>
