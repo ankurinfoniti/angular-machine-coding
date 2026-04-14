@@ -18,6 +18,7 @@ import { BlogPost } from './blog-post/container/blog-post/blog-post';
 import { FocusInput } from './focus-input/focus-input';
 import { StopWatch } from './stop-watch/stop-watch';
 import { HolyGrail } from './holy-grail/holy-grail';
+import { ReadMore } from './read-more/read-more';
 
 export const routes: Routes = [
   {
@@ -91,5 +92,9 @@ export const routes: Routes = [
   {
     path: 'holy-grail',
     component: HolyGrail,
+  },
+  {
+    path: 'read-more',
+    component: ReadMore,
   },
 ];
