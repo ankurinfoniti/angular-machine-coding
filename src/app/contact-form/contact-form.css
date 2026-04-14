@@ -1,0 +1,161 @@
+:host {
+  --bg-top: #f8f3e8;
+  --bg-bottom: #dae7e4;
+  --card: #fffdf8;
+  --ink: #202124;
+  --muted: #53575c;
+  --line: #cfcbc1;
+  --accent: #0b7a75;
+  --accent-strong: #0a645f;
+  --danger: #b4233f;
+
+  display: block;
+  min-height: 100dvh;
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 85% 15%, rgb(255 188 113 / 28%) 0, transparent 36%),
+    radial-gradient(circle at 10% 100%, rgb(11 122 117 / 20%) 0, transparent 42%),
+    linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
+}
+
+.contact-shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.contact-card {
+  width: min(100%, 680px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 22px 60px rgb(0 0 0 / 13%);
+  padding: clamp(1.1rem, 3.2vw, 2.2rem);
+  animation: rise-in 420ms ease-out;
+}
+
+h2 {
+  margin: 0.35rem 0 0.55rem;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.18;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.78rem 0.85rem;
+  font-size: 1rem;
+  color: var(--ink);
+  background: #fff;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    background-color 120ms ease;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 8.6rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgb(11 122 117 / 16%);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8b8d90;
+}
+
+button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.78rem 1.25rem;
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  cursor: pointer;
+  transition:
+    transform 100ms ease,
+    filter 100ms ease;
+}
+
+button:hover {
+  filter: brightness(1.04);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgb(11 122 117 / 38%);
+  outline-offset: 2px;
+}
+
+.error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.success {
+  border: 1px solid #9fc6c3;
+  background: linear-gradient(160deg, #eff9f7, #ffffff);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.success p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 620px) {
+  .contact-card {
+    border-radius: 18px;
+  }
+
+  button {
+    width: 100%;
+    justify-self: stretch;
+  }
+}

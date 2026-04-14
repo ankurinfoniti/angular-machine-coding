@@ -1,0 +1,55 @@
+<section class="contact-shell">
+  <article class="contact-card" aria-labelledby="contact-title">
+    @if (isSubmitted()) {
+      <div class="success" role="status" aria-live="polite">
+        <h2 id="contact-title">Message received</h2>
+        <p>Thank you for contacting us. We will get back to you shortly.</p>
+      </div>
+    } @else {
+      <form class="form-grid" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            formControlName="name"
+            autocomplete="name"
+            placeholder="Jane Doe"
+          />
+          @if (name.invalid && (name.dirty || name.touched)) {
+            <p class="error">Name is required.</p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            formControlName="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+          />
+          @if (email.invalid && (email.dirty || email.touched)) {
+            <p class="error">Enter a valid email address.</p>
+          }
+        </div>
+
+        <div class="field">
+          <label for="message">Project details</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            rows="5"
+            placeholder="Tell us what you want to build"
+          ></textarea>
+          @if (message.invalid && (message.dirty || message.touched)) {
+            <p class="error">Message is required.</p>
+          }
+        </div>
+
+        <button type="submit">Send message</button>
+      </form>
+    }
+  </article>
+</section>
