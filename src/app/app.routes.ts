@@ -17,6 +17,7 @@ import { FilterRecipes } from './filter-recipes/filter-recipes';
 import { BlogPost } from './blog-post/container/blog-post/blog-post';
 import { FocusInput } from './focus-input/focus-input';
 import { StopWatch } from './stop-watch/stop-watch';
+import { HolyGrail } from './holy-grail/holy-grail';
 
 export const routes: Routes = [
   {
@@ -86,5 +87,9 @@ export const routes: Routes = [
   {
     path: 'stop-watch',
     component: StopWatch,
+  },
+  {
+    path: 'holy-grail',
+    component: HolyGrail,
   },
 ];
