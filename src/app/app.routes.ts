@@ -20,6 +20,7 @@ import { StopWatch } from './stop-watch/stop-watch';
 import { HolyGrail } from './holy-grail/holy-grail';
 import { ReadMore } from './read-more/read-more';
 import { ContactForm } from './contact-form/contact-form';
+import { ArrayToZigzagStringConverter } from './array-to-zigzag-string-converter/array-to-zigzag-string-converter';
 
 export const routes: Routes = [
   {
@@ -101,5 +102,9 @@ export const routes: Routes = [
   {
     path: 'contact-form',
     component: ContactForm,
+  },
+  {
+    path: 'array-to-zigzag-string-converter',
+    component: ArrayToZigzagStringConverter,
   },
 ];
